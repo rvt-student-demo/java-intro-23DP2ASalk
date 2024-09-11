@@ -5,17 +5,13 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Chicken:");
-        String chicken = scanner.nextLine();
-        System.out.println("Bacon(kg):");
-        String bacon = scanner.nextLine();
-        System.out.println("Tractor:");
-        String tractor = scanner.nextLine();
-
-        System.out.println("And finally, a smmary:");
-        System.out.println(chicken);
-        System.out.println(bacon);
-        System.out.println(tractor);
+        System.out.println("Ievadi savu vārdu:");
+        String name = scanner.nextLine();
+        System.out.println("Ievadi savu uzvārdu");
+        String surname = scanner.nextLine();
+        System.out.println("Ievadi savu grupu");
+        String group = scanner.nextLine();
+        System.out.println("Students " + name + " " + surname + ", grupa: " + group);
     }
 
 }
