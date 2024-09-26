@@ -8,10 +8,11 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ievadiet skaitli: ");
-        int start = Integer.valueOf(scanner.nextLine());
-        int end = 101;
-        for (int i = start; i < end; i++) {
-            System.out.println(i);
+        int num = Integer.valueOf(scanner.nextLine());
+        int x = 1;
+        for (int i = 1; i <= num; i++) {
+            x *= i;
         }
+        System.out.println(x);
     }
 }
