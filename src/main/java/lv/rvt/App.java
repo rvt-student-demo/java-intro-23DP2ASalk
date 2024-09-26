@@ -1,18 +1,44 @@
 package lv.rvt;
+
 import java.util.Scanner;
 
-import javax.sound.midi.Soundbank;
 public class App 
 {
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ievadiet skaitli: ");
-        int num = Integer.valueOf(scanner.nextLine());
-        int x = 1;
-        for (int i = 1; i <= num; i++) {
-            x *= i;
+        int sum = 0;
+        int numbers = 0;
+        double avg = 0;
+        int even = 0;
+        int odd = 0;
+
+        while(true){
+            System.out.println("Ievadiet skaitli(lsi beigtu -1): ");
+            int num = Integer.valueOf(scanner.nextLine());
+
+            if (num == -1) {
+                System.out.println("Thx! Bye!");
+                if (numbers > 0) {
+                    avg = (double) sum / numbers;
+                }
+                System.out.println("Sum: " + sum);
+                System.out.println("Numbers: " + numbers);
+                System.out.println("Average: " + avg);
+                System.out.println("Even: " + even);
+                System.out.println("Odd: " + odd);
+                break;
+            } 
+            else{
+                sum += num;
+                numbers++;
+                if (num % 2 == 0){
+                    even++;
+                } else {
+                    odd++;
+                }
+            }
         }
-        System.out.println(x);
+        scanner.close();
     }
 }
