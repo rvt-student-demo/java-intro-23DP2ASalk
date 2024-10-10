@@ -26,4 +26,29 @@ public class Stars {
             System.out.println();
         }
     }
+    public static void printSpaces(int number) {
+        for (int i = 0; i < number; i++)
+        System.out.print(' ');
+    }
+    public static void printRsTriangle(int h) {
+        for (int i = 1; i < h + 1; i++) {
+            printSpaces(h-i);
+            printStars(i);
+            System.out.println();
+        }
+    }
+    public static void printChristmasTree(int h) {
+        int j = 0;
+        for (int i = 1; i < h + 1; i++) {
+            printSpaces(h-i);
+            printStars(i+j);
+            j += 1;
+            System.out.println();
+        }
+        for (int i = 0; i < 2; i++) {
+            printSpaces(h-2);
+            printStars(3);
+            System.out.println();
+        }
+    }
 }
