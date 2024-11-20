@@ -39,5 +39,8 @@ public class Person {
         return this.height;
     }
     
+    public String toString(){
+        return this.name;
+    }
         
 }
