@@ -40,7 +40,7 @@ public class Person {
     }
     
     public String toString(){
-        return this.name;
+        return name + ", " + age + ", " + weight + ", " + height;
     }
         
 }

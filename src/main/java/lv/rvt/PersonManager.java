@@ -13,7 +13,7 @@ public class PersonManager {
         try (BufferedReader br = new BufferedReader(new FileReader("/workspaces/java-intro-23DP2ASalk/data/persons.csv"))) {
             String line;
             while ((line = br.readLine()) != null) {
-                String[] data = line.split(",");
+                String[] data = line.split(", ");
                 String name = data[0].trim();
                 int age = Integer.parseInt(data[1].trim());
                 int weight = Integer.parseInt(data[2].trim());
@@ -26,7 +26,6 @@ public class PersonManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return personList;
     }
 }
