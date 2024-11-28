@@ -1,8 +1,10 @@
 package lv.rvt;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class PersonManager {
@@ -27,5 +29,13 @@ public class PersonManager {
             e.printStackTrace();
         }
         return personList;
+    }
+    public static void addPerson(Person person){
+        BufferedWriter writer =
+        Helper.getWriter(filename:"/workspaces/java-intro-23DP2ASalk/data/persons.csv", StandardOpenOption.APPEND)
+        Person person = new Person();
+        writer.write(person.toCsvRow());
+        writer.newLine();
+        writer.close();
     }
 }
