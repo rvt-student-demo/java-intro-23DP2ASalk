@@ -42,5 +42,8 @@ public class Person {
     public String toString(){
         return name + ", " + age + ", " + weight + ", " + height;
     }
+    public String toCsvRow() {
+        return String.format("%s, %d, %d, %d", name, age, weight, height);
+    }
         
 }
