@@ -6,6 +6,7 @@ public class Person {
     private SimpleDate birthday;
     private int height;
     private int weight;
+	private String address;
 
     public Person(String name, SimpleDate birthday, int height, int weight) {
         this.name = name;
@@ -13,8 +14,6 @@ public class Person {
         this.height = height;
         this.weight = weight;
     }
-
-    // implement an equals method here for checking the equality of objects
     @Override
     public boolean equals(Object compared) {
         if (this == compared) {
@@ -38,4 +37,17 @@ public class Person {
 
         return false;
     }
+    public Person (String name, String address) {
+		this.name=name;
+		this.address=address;
+	}
+	public String getName() {
+		return name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public String toString() {
+		return name + '\n' + "  " + address;
+	}
 }
