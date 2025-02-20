@@ -1,18 +1,33 @@
 package lv.rvt;
-import java.util.Objects;
 
 public class Person {
     private String name;
     private SimpleDate birthday;
     private int height;
     private int weight;
+    private int age;
 	private String address;
 
-    public Person(String name, SimpleDate birthday, int height, int weight) {
+
+    public Person(String name, int age, int height, int weight) {
         this.name = name;
-        this.birthday = birthday;
+        this.age = age;
         this.height = height;
         this.weight = weight;
+    }
+    public int getAge() {
+        return this.age;
+    }
+    
+    public int getWeight() {
+        return this.weight;
+    }
+    
+    public int getHeight() {
+        return this.height;
+    }
+    public void setWeight(int newWeight) {
+        this.weight = newWeight;
     }
     @Override
     public boolean equals(Object compared) {
@@ -50,4 +65,7 @@ public class Person {
 	public String toString() {
 		return name + '\n' + "  " + address;
 	}
+    public String toCsvRow() {
+        return String.format("%s, %d, %d, %d", name, age, weight, height);
+    }
 }
